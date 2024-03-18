@@ -1,0 +1,284 @@
+body{background-color: black;
+color:white;}
+
+.header{display:flex;
+flex-direction:row;
+position:absolute;
+width:100%;
+display:flex;
+}
+
+.logo{position: relative;
+top:0;
+left:0;
+height: 60px;
+object-fit: cover;
+}
+.logo-text{
+position: relative;
+color:white;
+font-size: 24px;
+}
+
+.logo-container{
+display:flex;
+flex-direction: row;}
+
+.search-container {
+    position:relative;
+    width:100%;
+    margin-top: 10px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.search-bar{width:500px;
+border-radius:20px;
+background-color: black;
+color:beige;
+height:40px;
+border-right: 0;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+border-width:1px;
+min-width: 20px;
+max-width:600px; 
+border-color: beige;
+border-style:outset;
+}
+
+.ri-menu-line{color:white;
+margin-top: 20px;}
+
+.search{border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 40px;
+    width: 80px;
+    background-color: rgb(22, 22, 22);
+    color:white;
+    border-width: 1px;
+    border-color: beige;}
+.ri-more-2-line{color:white;}
+
+.ri-user-line , .ri-more-2-line{color:white;
+
+}
+.profile-container{display: flex;
+flex-direction: row;
+gap:20px;
+align-items: center;
+margin-right: 40px;}
+
+.mic{border-radius: 50%;
+height: 30px;
+background-color: black;
+color:white;
+margin-left:10px;}
+
+.body-container{display:flex;
+position:fixed;
+top:60px;
+}
+
+
+.sidebar-items{background-color:rgb(24, 21, 21);
+    display:flex;
+    flex-direction: column;
+    width:100%; 
+    color: rgb(255, 255, 255);}
+
+
+.sidebar{overflow-y: scroll;
+    height:700px;
+    width: 200px;
+
+}   
+
+    
+
+
+
+    a{
+    text-decoration:none;}
+    
+    hr{width:100%;}
+
+    .sideitem{color:white;
+        padding:15px;
+        height:40px;}
+
+    .sideitem i{margin-right: 20px;}
+
+    p{
+        color:white;
+        font-weight:bold;
+    }
+
+    .suggestion{background-color: black;
+        color: aqua;
+        position:relative;
+        display:flex;
+        flex-direction:row;
+        height: 30px;
+        width:70%;
+        gap:20px;
+        overflow-x : scroll;
+        padding: 20px;
+        margin: 20px;
+    }
+    .group{
+        display:flex;
+        align-items: center;
+    }
+    .fade_box{
+        content:'';
+        position:absolute;
+        width:20px;
+        height:30px;
+        background-color:black;
+        border-radius: 3px;
+        opacity: 0;
+        
+    }
+    .first_box{
+        left:18.4%;
+     }
+    .last_box{
+        left:78.5%; 
+    }
+    .suggestion:hover ~ .fade_box{
+        transition:all 1.2s ease;
+        opacity:0.4;
+    }
+.body-container{display:flex;
+       flex-direction:row;
+}
+::-webkit-scrollbar{display: none;}
+
+.all{
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    background-color: rgb(2, 49, 35);
+    color:white;
+    font-size: 17px;
+}
+.all1{background-color: aliceblue;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    font-size: 17px;
+}
+
+.videos{position:relative ;
+display:grid;
+grid-template-columns: 20% 20% 20% ;
+grid-template-rows: 20% 20% ;
+row-gap :110px;
+column-gap:50px;
+}
+
+.thumb{
+    width:230px;
+    height: 140px;
+    border-radius: 8px;
+}
+
+.under_vid {
+    display:flex;
+    flex-direction:row;
+    gap: 10px;
+
+}
+
+.write_up{
+    display:flex;
+    flex-direction: column;
+    gap:15px}
+
+.profile{
+    border-radius:50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+
+}
+
+.account_name{
+    font-size:small;
+    color:grey;
+}
+
+
+.video{
+padding: 20px;
+border-radius: 8px;
+}
+
+         /*    Responsiveness   */           
+@media (max-width :535px) {
+    .search-bar, .search, .mic{
+        visibility:hidden;
+    }
+    
+   
+}
+
+@media (max-width:768px) {
+    .videos{
+        grid-template-columns: 45% 45% ;
+        object-fit :fit;
+        column-gap: 0;
+        row-gap: 10;
+        
+       } 
+    .search-bar{
+        width:100px;
+        
+    }
+
+    .thumb{
+        width: 68%;
+    
+        
+    }
+
+    .video{
+      
+        
+    }
+
+    .sidebar{
+        display:none;
+    }
+    .sidebar2{
+        visibility: visible;
+    }
+
+}
+
+@media (max-width:535px)
+{
+    .videos{
+        grid-template-columns: 70%;
+        gap: 10px;
+        overflow-y: scroll;
+
+    }
+    .thumb{
+        height:200px;
+
+    }
+       
+    }
+
+@media (max-width:975px) {
+.search-bar{
+    max-width:300px
+}
+}
+}
